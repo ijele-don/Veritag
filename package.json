@@ -11,6 +11,7 @@
   "scripts": {
     "build": "pnpm -r build",
     "test": "pnpm -r test",
+    "test:coverage": "pnpm -r test -- --coverage --coverage.reporter=lcov --coverage.reporter=text",
     "lint": "pnpm -r lint",
     "typecheck": "pnpm -r typecheck",
     "contract:build": "stellar contract build",
@@ -22,6 +23,7 @@
   },
   "devDependencies": {
     "@types/node": "^22.13.0",
+    "@vitest/coverage-v8": "^3.0.5",
     "tsx": "^4.19.2",
     "typescript": "^5.7.3",
     "vitest": "^3.0.5"

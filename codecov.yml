@@ -1,0 +1,44 @@
+codecov:
+  require_ci_to_pass: true
+
+coverage:
+  precision: 2
+  round: down
+  range: "70...100"
+
+  status:
+    project:
+      default:
+        target: auto
+        threshold: 1%
+      contracts:
+        target: 85%
+        threshold: 1%
+        paths:
+          - "contracts/"
+      sdk-and-backend:
+        target: 80%
+        threshold: 1%
+        paths:
+          - "packages/sdk/"
+          - "backend/"
+    patch:
+      default:
+        target: 80%
+        threshold: 1%
+
+flags:
+  contracts:
+    paths:
+      - "contracts/"
+  typescript:
+    paths:
+      - "packages/"
+      - "backend/"
+      - "indexer/"
+      - "web/"
+
+comment:
+  layout: "reach,diff,flags,files,footer"
+  behavior: default
+  require_changes: false
